@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <canvas id="particle-bg"></canvas>
 
   <header class="hero-header">
@@ -18,10 +19,10 @@
 
   <nav class="nav-bar">
     <a href="#home">HOME</a>
-    <a href="#projects">PROJECTS</a>
     <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#awards">AWARDS</a>
     <a href="#contact">CONTACT</a>
-    <a href="#cv">CV</a>
   </nav>
 
   <!-- SECTION: INTRO -->
@@ -33,27 +34,116 @@
           Hi! Welcome to my humble web portfolio. My name is Dídac Pardo, a passionate 3D artist who thrives on seeing projects grow and evolve. I work with a diverse set of advanced digital tools and techniques to bring ideas to life. I consider myself a hardworking individual with a lot of energy and dedication for every project I take on.
         </p>
       </div>
-
-      <!-- Watch Reel Button -->
       <div class="reel-button-wrapper">
         <button id="show-reel" class="reel-button">🎬 Watch My Reel</button>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: CHIBI CHARACTER -->
+  <!-- SECTION: ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-content">
+        <h2 class="section-title">ABOUT ME</h2>
+        
+        <div class="about-text">
+          <p>I'm a visual effects artist with a deep passion for storytelling through motion. My background in motion graphics and video editing sparked my love for visual effects, turning ordinary footage into something cinematic and emotionally powerful.</p>
+          
+          <p>Over the years, I've honed my skills in Houdini, Maya, and After Effects, focusing on creating everything from realistic fire, smoke, and fluid simulations to more stylized effects. I love crafting visuals that don’t just look good—they help tell a story.</p>
+          
+          <div class="skills-section">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h4>3D & FX Software</h4>
+                <ul>
+                  <li>Houdini </li>
+                  <li>Maya</li>
+                  <li>Blender</li>
+                  <li>Unreal Engine</li>
+                  <li>Martvelous Designer</li>
+                  <li>Substance Painter</li>
+                  <li>Cinema 4D</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Compositing & MotionGraphic Design</h4>
+                <ul>
+                  <li>Nuke</li>
+                  <li>After Effects</li>
+                  <li>Fusion</li>
+                  <li>Natron</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Video & Photo editing</h4>
+                <ul>
+                  <li>Photoshop</li>
+                  <li>Premiere Pro</li>
+                  <li>ZBrush</li>
+                  <li>DaVinci Resolve</li>
+                  <li>Sony Vegas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p>When I'm not creating digital effects, you can find me experimenting with practical effects, studying classic films for their VFX work, or teaching aspiring artists the fundamentals of motion graphics.</p>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <img src="images/Foto CV.png" alt="Dídac Pardo working on FX" class="profile-photo">
+        <div class="experience-box">
+          <div class="exp-item">
+            <span class="exp-years">5+</span>
+            <span class="exp-label">Years Experience</span>
+          </div>
+          <div class="exp-item">
+            <span class="exp-years">30+</span>
+            <span class="exp-label">Projects Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="education-section">
+      <h3>Education & Training</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2017-2019</div>
+          <div class="timeline-content">
+            <h4>3D Infography and Graphic Design</h4>
+            <p>EADR (Escola d'Art i Disseny de Reus)</p>
+            <p>Focus on After Effects and Cinema 4D</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2019-2023</div>
+          <div class="timeline-content">
+            <h4>Batchlor's Degree in Animation and FX</h4>
+            <p>La Salle Bonanova, Barcelona</p>
+            <p>Specialized in FX simulation and dynamics, procedural modeling and Crowds</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIBI CHARACTER -->
   <div class="chibi-container">
     <img src="images/Chibi Didac.png" alt="Chibi version of Dídac" class="chibi-img" />
   </div>
 
-  <!-- SECTION: SOCIAL LINKS -->
+  <!-- SOCIAL LINKS -->
   <div class="social-buttons">
     <a href="https://www.linkedin.com/in/didac-pardo/" class="social-btn linkedin" target="_blank">LINKEDIN</a>
     <a href="https://www.instagram.com/didac_pardo/" class="social-btn instagram" target="_blank">INSTAGRAM</a>
     <a href="https://www.youtube.com/@D1D4CP4RD0" class="social-btn youtube" target="_blank">YOUTUBE</a>
+    <a href="documents/CV_DidacPardoMartinez.pdf" class="social-btn cv" target="_blank" download>DOWNLOAD CV</a>
   </div>
 
-  <!-- MODAL VIDEO -->
+  <!-- REEL MODAL -->
   <div id="reel-modal" class="modal">
     <div class="modal-content">
       <span class="close-button" id="close-reel">&times;</span>
@@ -64,84 +154,105 @@
     </div>
   </div>
 
-<section id="projects" class="projects-section">
-  <h2 class="projects-title">PROJECTS</h2>
-
-    <!-- PROJECT 1 -->
-  <div class="project-item">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/BurningCar.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects-grid-section">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-thumbnail" data-video="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation">
+        <img src="images/BurningCar.png" alt="Burning Car">
+        <div class="hover-text">Burning Car - Houdini simulation</div>
+      </div>
+      <div class="project-thumbnail" data-video="videos/ZenFountain.mp4" data-description="Zen Fountain - Environment modeling and FX">
+        <img src="images/ZenFountain.png" alt="Zen Fountain">
+        <div class="hover-text">Zen Fountain - Environment modeling and FX</div>
+      </div>
+      <div class="project-thumbnail" data-video="videos/ToonFire.mp4" data-description="Toon Fire - Cartoon-style fire effects">
+        <img src="images/ToonFire.png" alt="Toon Fire">
+        <div class="hover-text">Toon Fire - Cartoon-style fire effects</div>
+      </div>
+      <div class="project-thumbnail" data-video="videos/Bubble.mp4" data-description="Bubble - FX simulation">
+        <img src="images/Bubble.png" alt="Bubble">
+        <div class="hover-text">Bubble - FX simulation</div>
+      </div>
+      <div class="project-thumbnail" data-video="videos/ASCII.mp4" data-description="ASCII - Creative FX project">
+        <img src="images/ASCII.png" alt="ASCII">
+        <div class="hover-text">ASCII - Creative FX project</div>
+      </div>
+      <div class="project-thumbnail" data-video="videos/Explosion.mp4" data-description="Explosion - Realistic FX explosion">
+        <img src="images/Explosion.png" alt="Explosion">
+        <div class="hover-text">Explosion - Realistic FX explosion</div>
+      </div>
     </div>
-    <div class="project-text">
-      <p>Explosive car scene simulating realistic fire and smoke behavior using Houdini and composited in After Effects.</p>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close-button">&times;</span>
+      <video id="project-video" controls></video>
+      <div id="project-description" class="modal-description"></div>
     </div>
   </div>
 
-    <!-- PROJECT 2 -->
-  <div class="project-item reverse">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/ASCII.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="project-text">
-      <p>ASCII art scene using Copy to Points and Wrangles</p>
-    </div>
+  <!-- AWARDS SECTION -->
+<section id="awards" class="awards-section">
+  <h2 class="section-title">Awards & Recognition</h2>
+  <p class="awards-intro">
+    I'm incredibly proud to have received multiple awards for my FX and motion graphics work. Below is a highlight from the piece that earned these recognitions.
+  </p>
+
+  <div class="awards-image">
+    <img src="images/Malas_Hierbas.png" alt="Award-winning project still">
   </div>
 
-  <!-- PROJECT 3 -->
-  <div class="project-item">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/ZenFountain.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="project-text">
-      <p>Water simulation with FLIP fluids showcasing splashes and surface tension for a product animation.</p>
-    </div>
+  <div class="awards-video">
+    <a href="https://www.youtube.com/watch?v=uZWE-R4sVWA" target="_blank" class="video-link">
+      ▶ Watch the Award-Winning Project on YouTube
+    </a>
   </div>
 
-  <!-- PROJECT 4 -->
-  <div class="project-item reverse">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/Explosion.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="project-text">
-      <p>Stylized energy blast inspired by anime VFX, composited with glowing trails and screen shake.</p>
-    </div>
-  </div>
+<div class="award-details">
+  <h3>Honors Received</h3>
+  <ul>
+    <li>
+      <strong>Nominated to the 2023 Animaizon Film Awards in Zaragoza, Spain.</strong><br />
+      <a href="https://animainzon.blogspot.com/p/jornadas-2021.html" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Winner to the New York International Film Awards on October 2023 to the best short under 5 minutes.</strong><br />
+      <a href="https://www.instagram.com/p/Cz9Ib9cooMS/?img_index=2" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Winner of the Platinum Award for Best Short Film in the Independent Shorts Awards in Los Angeles, November 2023.</strong><br />
+      <a href="https://www.instagram.com/p/C0Rs2Bhoitw/" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Nominated to the Acocollonat Horror Film Festival in Girona, Catalunya.</strong><br />
+      <a href="https://www.instagram.com/p/C0zdqBRIQlm/?img_index=1" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Special mention to the London Worldwide Comedy Short Film Festival in 2024.</strong><br />
+      <a href="https://www.instagram.com/p/C1Z9yuLoHjV/" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Nominated to the Terrifying Thai Film Festival in Tailandia in 2023.</strong><br />
+      <a href="https://www.instagram.com/p/C3Iw2J0Ireu/" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Winner of the Jury Special Award on the Japanese Golden Harvest Film Festival.</strong><br />
+      <a href="https://www.instagram.com/p/C5WgnCftx5f/" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+    <li>
+      <strong>Winner of the “Best Animation Short” awarded by LA Festival of Cinema.</strong><br />
+      <a href="https://www.instagram.com/p/C5oYOditest/" class="award-link" target="_blank">View Festival Website</a>
+    </li>
+  </ul>
+</div>
 
-  <!-- PROJECT 5 -->
-  <div class="project-item">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/Bubble.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="project-text">
-      <p>Creature reveal scene using shadow play, volumetrics, and 3D tracking integrated into live footage.</p>
-    </div>
-  </div>
 
-  <!-- PROJECT 6 -->
-  <div class="project-item reverse">
-    <div class="video-container">
-      <video controls>
-        <source src="videos/ToonFire.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="project-text">
-      <p>Motion graphics intro made with After Effects and Element 3D for a gaming channel.</p>
-    </div>
-  </div>
 </section>
 
-  <!-- PARTICLES SCRIPT (same as before) -->
+  <!-- PARTICLE BACKGROUND SCRIPT -->
   <script>
     const canvas = document.getElementById('particle-bg');
     const ctx = canvas.getContext('2d');
@@ -150,8 +261,14 @@
     const PARTICLE_COUNT = 100;
     const MAX_DISTANCE = 120;
 
-    function init() {
-      resize();
+    function resize() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }
+
+    function initParticles() {
       particles = [];
       for (let i = 0; i < PARTICLE_COUNT; i++) {
         particles.push({
@@ -162,26 +279,19 @@
           radius: 2 + Math.random() * 2,
         });
       }
-      animate();
     }
 
-    function resize() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    }
-
-    function animate() {
+    function animateParticles() {
       ctx.clearRect(0, 0, width, height);
       for (let p of particles) {
         p.x += p.vx;
         p.y += p.vy;
         if (p.x < 0 || p.x > width) p.vx = -p.vx;
         if (p.y < 0 || p.y > height) p.vy = -p.vy;
+
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(102, 0, 0, 0.8)';
+        ctx.fillStyle = 'rgba(255, 120, 0, 0.8)';
         ctx.fill();
       }
 
@@ -193,7 +303,7 @@
           if (dist < MAX_DISTANCE) {
             ctx.beginPath();
             ctx.strokeStyle = `rgba(102, 0, 0, ${1 - dist / MAX_DISTANCE})`;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 3;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
@@ -201,60 +311,97 @@
         }
       }
 
-      requestAnimationFrame(animate);
+      requestAnimationFrame(animateParticles);
     }
 
-    window.addEventListener('resize', resize);
-    init();
+    window.addEventListener('resize', () => {
+      resize();
+      initParticles();
+    });
+
+    resize();
+    initParticles();
+    animateParticles();
+
+    // Ensure background video plays
+    document.addEventListener('DOMContentLoaded', function() {
+      const bgVideo = document.getElementById('bg-video');
+      bgVideo.play().catch(e => {
+        console.log("Autoplay prevented, trying again with user gesture");
+        document.body.addEventListener('click', function() {
+          bgVideo.play();
+        }, { once: true });
+      });
+    });
   </script>
 
-  <!-- MODAL SCRIPT -->
+  <!-- MODAL SCRIPTS (Reel + Projects) -->
   <script>
-    const showReelBtn = document.getElementById("show-reel");
-    const modal = document.getElementById("reel-modal");
-    const closeBtn = document.getElementById("close-reel");
-    const videos= modal.querySelector("video");
+    document.addEventListener("DOMContentLoaded", () => {
+      // Reel modal
+      const showReelBtn = document.getElementById("show-reel");
+      const reelModal = document.getElementById("reel-modal");
+      const reelCloseBtn = document.getElementById("close-reel");
+      const reelVideo = reelModal.querySelector("video");
 
-    showReelBtn.addEventListener("click", () => {
-      modal.style.display = "flex";
-      setTimeout(() => modal.classList.add("visible"), 10);
-      video.currentTime = 0;
-      video.play();
+      showReelBtn.addEventListener("click", () => {
+        reelModal.style.display = "flex";
+        setTimeout(() => reelModal.classList.add("visible"), 10);
+        reelVideo.currentTime = 0;
+        reelVideo.play();
+      });
+
+      reelCloseBtn.addEventListener("click", () => {
+        reelModal.classList.remove("visible");
+        setTimeout(() => reelModal.style.display = "none", 300);
+        reelVideo.pause();
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === reelModal) {
+          reelCloseBtn.click();
+        }
+      });
+
+      // Project modal
+      const thumbnails = document.querySelectorAll('.project-thumbnail');
+      const projectModal = document.getElementById('project-modal');
+      const projectVideo = document.getElementById('project-video');
+      const projectDesc = document.getElementById('project-description');
+      const projectCloseBtn = document.getElementById('close-modal');
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const videoSrc = thumb.getAttribute('data-video');
+          const descText = thumb.getAttribute('data-description');
+
+          projectVideo.src = videoSrc;
+          projectVideo.volume = 0.33;
+          projectVideo.play();
+
+          projectDesc.textContent = descText;
+
+          projectModal.style.display = 'flex';
+          setTimeout(() => projectModal.classList.add('visible'), 10);
+        });
+      });
+
+      projectCloseBtn.addEventListener('click', () => {
+        projectModal.classList.remove('visible');
+        setTimeout(() => {
+          projectModal.style.display = 'none';
+          projectVideo.pause();
+          projectVideo.src = '';
+          projectDesc.textContent = '';
+        }, 300);
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+          projectCloseBtn.click();
+        }
+      });
     });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("visible");
-      setTimeout(() => modal.style.display = "none", 300);
-      video.pause();
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.remove("visible");
-        setTimeout(() => modal.style.display = "none", 300);
-        video.pause();
-      }
-    });
-
-      const video = document.querySelector('#video-container video');
-
-  window.addEventListener('keydown', (e) => {
-    if (e.code === 'Space' && !e.repeat) {
-      e.preventDefault(); // stop spacebar from scrolling/restarting video
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
-  });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const videos = document.querySelectorAll("video");
-    videos.forEach(video => {
-      video.volume = 0.15;
-    });
-  });
   </script>
 </body>
 </html>
