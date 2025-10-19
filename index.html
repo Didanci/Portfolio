@@ -67,7 +67,7 @@
                   <li>Maya</li>
                   <li>Blender</li>
                   <li>Unreal Engine</li>
-                  <li>Martvelous Designer</li>
+                  <li>Marvelous Designer</li>
                   <li>Substance Painter</li>
                   <li>Cinema 4D</li>
                 </ul>
@@ -132,6 +132,15 @@
             <p>Specialized in FX simulation and dynamics, procedural modeling and Crowds</p>
           </div>
         </div>
+
+         <div class="timeline-item">
+        <div class="timeline-date">2023-Today</div>
+        <div class="timeline-content">
+          <h4>Rebelway FX Fantasy Online Course & Professional Experience</h4>
+          <p>Rebelway Academy & Absolute Frame</p>
+          <p>Completed FX Fantasy Online Course at Rebelway Academy and worked as Motion Graphic Designer at Absolute Frame, producing video advertisements for social media platforms from January 2024 to June 2024</p>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -160,46 +169,55 @@
     </div>
   </div>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="projects-grid-section">
-    <h2 class="projects-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-thumbnail" data-video="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation">
-        <img src="images/BurningCar.png" alt="Burning Car">
-        <div class="hover-text">Burning Car - Houdini simulation</div>
-      </div>
-      <div class="project-thumbnail" data-video="videos/ZenFountain.mp4" data-description="Zen Fountain - Environment modeling and FX">
-        <img src="images/ZenFountain.png" alt="Zen Fountain">
-        <div class="hover-text">Zen Fountain - Environment modeling and FX</div>
-      </div>
-      <div class="project-thumbnail" data-video="videos/ToonFire.mp4" data-description="Toon Fire - Cartoon-style fire effects">
-        <img src="images/ToonFire.png" alt="Toon Fire">
-        <div class="hover-text">Toon Fire - Cartoon-style fire effects</div>
-      </div>
-      <div class="project-thumbnail" data-video="videos/Bubble.mp4" data-description="Bubble - FX simulation">
-        <img src="images/Bubble.png" alt="Bubble">
-        <div class="hover-text">Bubble - FX simulation</div>
-      </div>
-      <div class="project-thumbnail" data-video="videos/ASCII.mp4" data-description="ASCII - Creative FX project">
-        <img src="images/ASCII.png" alt="ASCII">
-        <div class="hover-text">ASCII - Creative FX project</div>
-      </div>
-      <div class="project-thumbnail" data-video="videos/Explosion.mp4" data-description="Explosion - Realistic FX explosion">
-        <img src="images/Explosion.png" alt="Explosion">
-        <div class="hover-text">Explosion - Realistic FX explosion</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PROJECT MODAL -->
-  <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span id="close-modal" class="close-button">&times;</span>
-      <video id="project-video" controls></video>
-      <div id="project-description" class="modal-description"></div>
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-grid-section">
+  <h2 class="projects-title">Projects</h2>
+  <div class="projects-grid">
+    <article class="project-thumbnail" data-video="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation. This project showcases realistic fire and smoke simulations created in Houdini, demonstrating advanced particle systems and pyro effects for a burning vehicle scenario.">
+      <img src="images/BurningCar.png" alt="Burning Car" width="400" height="300" loading="lazy">
+      <div class="hover-text">Burning Car - Houdini simulation</div>
+    </article>
+    <article class="project-thumbnail" data-video="videos/ZenFountain.mp4" data-description="Zen Fountain - Environment modeling and FX. A peaceful zen garden fountain featuring custom water simulations, environmental modeling, and atmospheric effects to create a serene and immersive scene.">
+      <img src="images/ZenFountain.png" alt="Zen Fountain" width="400" height="300" loading="lazy">
+      <div class="hover-text">Zen Fountain - Environment modeling and FX</div>
+    </article>
+    <article class="project-thumbnail" data-video="videos/ToonFire.mp4" data-description="Toon Fire - Cartoon-style fire effects. Stylized fire animation using non-photorealistic rendering techniques to achieve a cartoon aesthetic while maintaining dynamic movement and energy.">
+      <img src="images/ToonFire.png" alt="Toon Fire" width="400" height="300" loading="lazy">
+      <div class="hover-text">Toon Fire - Cartoon-style fire effects</div>
+    </article>
+    <article class="project-thumbnail" data-video="videos/Bubble.mp4" data-description="Bubble - FX simulation. Complex bubble physics simulation featuring realistic surface tension, refraction, and popping behaviors with detailed material properties and lighting interactions.">
+      <img src="images/Bubble.png" alt="Bubble" width="400" height="300" loading="lazy">
+      <div class="hover-text">Bubble - FX simulation</div>
+    </article>
+    <article class="project-thumbnail" data-video="videos/ASCII.mp4" data-description="ASCII - Creative FX project. Experimental visual effects using ASCII art conversion algorithms to transform 3D scenes into text-based animations, exploring the intersection of digital art and coding.">
+      <img src="images/ASCII.png" alt="ASCII" width="400" height="300" loading="lazy">
+      <div class="hover-text">ASCII - Creative FX project</div>
+    </article>
+    <article class="project-thumbnail" data-video="videos/Explosion.mp4" data-description="Explosion - Realistic FX explosion. High-detail explosion sequence featuring multi-layered effects including shockwaves, debris, heat distortion, and dynamic lighting for maximum cinematic impact.">
+      <img src="images/Explosion.png" alt="Explosion" width="400" height="300" loading="lazy">
+      <div class="hover-text">Explosion - Realistic FX explosion</div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="project-modal" class="modal">
+  <div class="modal-content project-modal-content">
+    <span id="close-modal" class="close-button">&times;</span>
+    <div class="project-modal-layout">
+      <div class="video-container">
+        <video id="project-video" controls playsinline style="width: 100%; height: auto; min-height: 400px;">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="description-container">
+        <h3 style="margin-top: 0; color: #ff7800;">Project Description</h3>
+        <div id="project-description" class="modal-description"></div>
+      </div>
     </div>
   </div>
-
+</div>
   <!-- AWARDS SECTION -->
 <section id="awards" class="awards-section">
   <h2 class="section-title">Awards & Recognition</h2>
@@ -254,6 +272,17 @@
     </li>
   </ul>
 </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Contact Me</h2>
+      <p>Interested in working together or have questions? Feel free to reach out!</p>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:didacpardomartinez@gmail.com">didacpardomartinez@gmail.com</a></p>
+        <p>Phone: <a href="tel:+34618180800">+34 618 180 800</a></p>
+      </div>
+    </section>
+  </main>
 
 
 </section>
@@ -408,6 +437,73 @@
         }
       });
     });
+
+    // Project modal functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbnails = document.querySelectorAll('.project-thumbnail');
+  const projectModal = document.getElementById('project-modal');
+  const projectVideo = document.getElementById('project-video');
+  const projectDesc = document.getElementById('project-description');
+  const projectCloseBtn = document.getElementById('close-modal');
+
+  function openProjectModal(videoSrc, descText) {
+    projectVideo.src = videoSrc;
+    projectVideo.volume = 0.33;
+    
+    projectDesc.textContent = descText;
+    projectModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(() => {
+      projectModal.classList.add('visible');
+      projectVideo.play().catch(e => console.log("Autoplay prevented:", e));
+    }, 10);
+  }
+
+  function closeProjectModal() {
+    projectModal.classList.remove('visible');
+    
+    setTimeout(() => {
+      projectModal.style.display = 'none';
+      document.body.style.overflow = '';
+      projectVideo.pause();
+      projectVideo.src = '';
+      projectDesc.textContent = '';
+    }, 300);
+  }
+
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const videoSrc = thumb.getAttribute('data-video');
+      const descText = thumb.getAttribute('data-description');
+      openProjectModal(videoSrc, descText);
+    });
+    
+    // Add keyboard support
+    thumb.setAttribute('tabindex', '0');
+    thumb.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const videoSrc = thumb.getAttribute('data-video');
+        const descText = thumb.getAttribute('data-description');
+        openProjectModal(videoSrc, descText);
+      }
+    });
+  });
+
+  projectCloseBtn.addEventListener('click', closeProjectModal);
+
+  window.addEventListener('click', (e) => {
+    if (e.target === projectModal) closeProjectModal();
+  });
+
+  // Close project modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal.style.display === 'flex') {
+      closeProjectModal();
+    }
+  });
+});
   </script>
 </body>
 </html>
