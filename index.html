@@ -10,137 +10,130 @@
 </head>
 <body>
 
+  <video id="bg-vfx" class="bg-vfx" autoplay muted loop playsinline aria-hidden="true">
+    <source src="videos/BG_Video.mp4" type="video/mp4">
+    <!-- fallback: just a static background if video unsupported -->
+  </video>
+
   <canvas id="particle-bg"></canvas>
 
-  <header class="hero-header">
-    <h1 class="site-title">DÍDAC PARDO MARTÍNEZ - FX Artist</h1>
-    <h2 class="site-summary"> FX Artist, Video Editor and MotionGraphic Designer </h2>
-  </header>
+  <div class="topbar">
+    <header id="home" class="hero-header">
+      <h1 class="site-title">DÍDAC PARDO MARTÍNEZ - FX Artist</h1>
+      <h2 class="site-summary">FX Artist, Video Editor and MotionGraphic Designer</h2>
+    </header>
 
-  <nav class="nav-bar">
-    <a href="#home">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#awards">AWARDS</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+    <nav class="nav-bar">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#awards">AWARDS</a>
+      <a href="#contact">CONTACT</a>
+      <button id="theme-toggle" class="btn" aria-label="Toggle theme" title="Toggle theme">Theme</button>
+    </nav>
+  </div>
 
   <!-- SECTION: INTRO -->
   <section class="intro-section">
     <div class="text-section">
       <h2 class="section-title">HELLO, I'M DÍDAC</h2>
       <div class="intro-box">
-        <p>
-          Hi! Welcome to my humble web portfolio. My name is Dídac Pardo, a passionate 3D artist who thrives on seeing projects grow and evolve. I work with a diverse set of advanced digital tools and techniques to bring ideas to life. I consider myself a hardworking individual with a lot of energy and dedication for every project I take on.
-        </p>
+        <p>Hi! Welcome to my humble web portfolio. My name is Dídac Pardo, a passionate 3D artist who thrives on seeing projects grow and evolve. I work with a diverse set of advanced digital tools and techniques to bring ideas to life. I consider myself a hardworking individual with a lot of energy and dedication for every project I take on.</p>
       </div>
-    <div class="intro-video">
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/DAIsh_BFewA"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+
+      <div class="intro-video">
+        <video id="intro-reel" controls playsinline preload="metadata">
+          <!-- Optional webm first, then mp4 -->
+          <source src="videos/DidacPardoMartinez_Reel_v01.mp4" type="video/mp4">
+          <source src="videos/DidacPardoMartinez_Reel_v01.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SECTION: ABOUT -->
   <section id="about" class="about-section">
     <div class="about-container">
       <div class="about-content">
         <h2 class="section-title">ABOUT ME</h2>
-        
         <div class="about-text">
-          <p>I'm a visual effects artist with a deep passion for storytelling through motion. My background in motion graphics and video editing sparked my love for visual effects, turning ordinary footage into something cinematic and emotionally powerful.</p>
-          
-          <p>Over the years, I've honed my skills in Houdini, Maya, and After Effects, focusing on creating everything from realistic fire, smoke, and fluid simulations to more stylized effects. I love crafting visuals that don’t just look good—they help tell a story.</p>
-          
-          <div class="skills-section">
-            <h3>Technical Skills</h3>
-            <div class="skills-grid">
-              <div class="skill-category">
-                <h4>3D & FX Software</h4>
-                <ul>
-                  <li>Houdini </li>
-                  <li>Maya</li>
-                  <li>Blender</li>
-                  <li>Unreal Engine</li>
-                  <li>Marvelous Designer</li>
-                  <li>Substance Painter</li>
-                  <li>Cinema 4D</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h4>Compositing & MotionGraphic Design</h4>
-                <ul>
-                  <li>Nuke</li>
-                  <li>After Effects</li>
-                  <li>Fusion</li>
-                  <li>Natron</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h4>Video & Photo editing</h4>
-                <ul>
-                  <li>Photoshop</li>
-                  <li>Premiere Pro</li>
-                  <li>ZBrush</li>
-                  <li>DaVinci Resolve</li>
-                  <li>Sony Vegas</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <p>When I'm not creating digital effects, you can find me experimenting with practical effects, studying classic films for their VFX work, or teaching aspiring artists the fundamentals of motion graphics.</p>
+          <p>I’m Dídac Pardo Martínez, an FX artist specialising in Houdini simulations, motion graphics and video editing. I create cinematic VFX, stylised simulations and environment work for short films and freelance projects.</p>
+          <p>My workflow spans look development, procedural modelling, pyro/flip/smoke simulations and compositing. I love combining storytelling with technical problem solving.</p>
+          <p>Available for freelance & contract work. Based in Spain.</p>
         </div>
       </div>
-      
+
       <div class="about-image">
         <img src="images/Foto CV.png" alt="Dídac Pardo working on FX" class="profile-photo">
-        <div class="experience-box">
-          <div class="exp-item">
-            <span class="exp-years">5+</span>
-            <span class="exp-label">Years Experience</span>
-          </div>
-          <div class="exp-item">
-            <span class="exp-years">30+</span>
-            <span class="exp-label">Projects Completed</span>
-          </div>
+        <!-- removed empty experience-box per user request -->
+      </div>
+    </div>
+    <!-- TECHNICAL SKILLS (added above Education & Training) -->
+    <div class="skills-section" aria-labelledby="skills-title">
+      <h3 id="skills-title">Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>3D & FX Software</h4>
+          <ul>
+            <li>Houdini</li>
+            <li>Maya</li>
+            <li>Blender</li>
+            <li>Unreal Engine</li>
+            <li>Marvelous Designer</li>
+            <li>Substance Painter</li>
+            <li>Cinema 4D</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Compositing & MotionGraphic Design</h4>
+          <ul>
+            <li>Nuke</li>
+            <li>After Effects</li>
+            <li>Fusion</li>
+            <li>Natron</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Video & Photo editing</h4>
+          <ul>
+            <li>Photoshop</li>
+            <li>Premiere Pro</li>
+            <li>ZBrush</li>
+            <li>DaVinci Resolve</li>
+            <li>Sony Vegas</li>
+          </ul>
         </div>
       </div>
     </div>
-    
+
     <div class="education-section">
       <h3>Education & Training</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-date">2017-2019</div>
           <div class="timeline-content">
-            <h4>3D Infography and Graphic Design</h4>
-            <p>EADR (Escola d'Art i Disseny de Reus)</p>
-            <p>Focus on After Effects and Cinema 4D</p>
+            <strong>3D Infography and Graphic Design</strong><br>
+            EADR (Escola d'Art i Disseny de Reus)<br>
+            Focus on After Effects and Cinema 4D
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-date">2019-2023</div>
           <div class="timeline-content">
-            <h4>Batchlor's Degree in Animation and FX</h4>
-            <p>La Salle Bonanova, Barcelona</p>
-            <p>Specialized in FX simulation and dynamics, procedural modeling and Crowds</p>
+            <strong>Bachelor's Degree in Animation and FX</strong><br>
+            La Salle Bonanova, Barcelona<br>
+            Specialized in FX simulation and dynamics, procedural modeling and Crowds
           </div>
         </div>
-
-         <div class="timeline-item">
-        <div class="timeline-date">2023-Today</div>
-        <div class="timeline-content">
-          <h4>Rebelway FX Fantasy Online Course & Professional Experience</h4>
-          <p>Rebelway Academy & Absolute Frame</p>
-          <p>Completed FX Fantasy Online Course at Rebelway Academy and worked as Motion Graphic Designer at Absolute Frame, producing video advertisements for social media platforms from January 2024 to June 2024</p>
+        <div class="timeline-item">
+          <div class="timeline-date">2023–Today</div>
+          <div class="timeline-content">
+            <strong>Rebelway FX Fantasy Online Course & Professional Experience</strong><br>
+            Rebelway Academy & Absolute Frame<br>
+            Completed FX Fantasy Online Course at Rebelway Academy and worked as Motion Graphic Designer at Absolute Frame, producing video advertisements for social media platforms from January 2024 to June 2024
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </section>
@@ -150,364 +143,274 @@
     <img src="images/Chibi Didac.png" alt="Chibi version of Dídac" class="chibi-img" />
   </div>
 
+  <!-- Noise overlay (subtle film grain) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
   <!-- SOCIAL LINKS -->
   <div class="social-buttons">
-    <a href="https://www.linkedin.com/in/didac-pardo/" class="social-btn linkedin" target="_blank">LINKEDIN</a>
-    <a href="https://www.instagram.com/didac_pardo/" class="social-btn instagram" target="_blank">INSTAGRAM</a>
-    <a href="https://www.youtube.com/@D1D4CP4RD0" class="social-btn youtube" target="_blank">YOUTUBE</a>
-    <a href="documents/CV_DidacPardoMartinez.pdf" class="social-btn cv" target="_blank" download>DOWNLOAD CV</a>
+    <a href="https://www.linkedin.com/in/didac-pardo/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://www.instagram.com/didac_pardo/" class="social-btn instagram" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+    <a href="https://www.youtube.com/@D1D4CP4RD0" class="social-btn youtube" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+    <a href="documents/CV_DidacPardoMartinez.pdf" class="social-btn cv" target="_blank" rel="noopener noreferrer" download>DOWNLOAD CV</a>
   </div>
 
   <!-- REEL MODAL -->
-  <div id="reel-modal" class="modal">
+  <div id="reel-modal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close-button" id="close-reel">&times;</span>
-      <video controls autoplay>
+      <span class="close-button" id="close-reel" role="button" aria-label="Close">&times;</span>
+      <!-- Autoplay removed so the reel does not play unexpectedly without JS -- use controls to play manually -->
+      <video controls muted id="reel-video">
         <source src="videos/DidacPardoMartinez_Reel_v01.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects-grid-section">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-grid">
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Burning Car - Houdini simulation" data-video="videos/BurningCar.mp4" data-preview="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation. This project showcases realistic fire and smoke simulations...">
+        <img src="images/BurningCar.png" alt="Burning Car" width="400" height="300" loading="lazy">
+        <div class="hover-text">Burning Car - Houdini simulation</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Zen Fountain - Environment modeling and FX" data-video="videos/ZenFountain.mp4" data-preview="videos/ZenFountain.mp4" data-description="Zen Fountain - Environment modeling and FX. A peaceful zen garden fountain featuring custom water simulations, environmental modeling, and atmospheric effects to create a serene and immersive scene.">
+        <img src="images/ZenFountain.png" alt="Zen Fountain" width="400" height="300" loading="lazy">
+        <div class="hover-text">Zen Fountain - Environment modeling and FX</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Toon Fire - Cartoon-style fire effects" data-video="videos/ToonFire.mp4" data-preview="videos/ToonFire.mp4" data-description="Toon Fire - Cartoon-style fire effects. Stylized fire animation using non-photorealistic rendering techniques to achieve a cartoon aesthetic while maintaining dynamic movement and energy.">
+        <img src="images/ToonFire.png" alt="Toon Fire" width="400" height="300" loading="lazy">
+        <div class="hover-text">Toon Fire - Cartoon-style fire effects</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Bubble - FX simulation" data-video="videos/Bubble.mp4" data-preview="videos/Bubble.mp4" data-description="Bubble - FX simulation. Complex bubble physics simulation featuring realistic surface tension, refraction, and popping behaviors with detailed material properties and lighting interactions.">
+        <img src="images/Bubble.png" alt="Bubble" width="400" height="300" loading="lazy">
+        <div class="hover-text">Bubble - FX simulation</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="ASCII - Creative FX project" data-video="videos/ASCII.mp4" data-preview="videos/ASCII.mp4" data-description="ASCII - Creative FX project. Experimental visual effects using ASCII art conversion algorithms to transform 3D scenes into text-based animations, exploring the intersection of digital art and coding.">
+        <img src="images/ASCII.png" alt="ASCII" width="400" height="300" loading="lazy">
+        <div class="hover-text">ASCII - Creative FX project</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Explosion - Realistic FX explosion" data-video="videos/Explosion.mp4" data-preview="videos/Explosion.mp4" data-description="Explosion - Realistic FX explosion. High-detail explosion sequence featuring multi-layered effects including shockwaves, debris, heat distortion, and dynamic lighting for maximum cinematic impact.">
+        <img src="images/Explosion.png" alt="Explosion" width="400" height="300" loading="lazy">
+        <div class="hover-text">Explosion - Realistic FX explosion</div>
+      </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Snow Tent - FX scene" data-video="videos/SnowTent.mp4" data-preview="videos/SnowTent.mp4" data-description="FX scene composed of Vellum Cloth simulations, Pyro simulation and a custom icicle effect to give the cold vibes I was looking for. I wanted to merge many effects into one singular scene to tel a story within a few seconds only. I just give you the starter, what happened really is up to you.">
+        <img src="images/SnowTent_Thumbnail.png" alt="SnowTent" width="400" height="300" loading="lazy">
+        <div class="hover-text">Snow Tent</div>
+      </article>
+    </div>
+  </section>
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="projects-grid-section">
-  <h2 class="projects-title">Projects</h2>
-  <div class="projects-grid">
-    <article class="project-thumbnail" data-video="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation. This project showcases realistic fire and smoke simulations created in Houdini, demonstrating advanced particle systems and pyro effects for a burning vehicle scenario.">
-      <img src="images/BurningCar.png" alt="Burning Car" width="400" height="300" loading="lazy">
-      <div class="hover-text">Burning Car - Houdini simulation</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/ZenFountain.mp4" data-description="Zen Fountain - Environment modeling and FX. A peaceful zen garden fountain featuring custom water simulations, environmental modeling, and atmospheric effects to create a serene and immersive scene.">
-      <img src="images/ZenFountain.png" alt="Zen Fountain" width="400" height="300" loading="lazy">
-      <div class="hover-text">Zen Fountain - Environment modeling and FX</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/ToonFire.mp4" data-description="Toon Fire - Cartoon-style fire effects. Stylized fire animation using non-photorealistic rendering techniques to achieve a cartoon aesthetic while maintaining dynamic movement and energy.">
-      <img src="images/ToonFire.png" alt="Toon Fire" width="400" height="300" loading="lazy">
-      <div class="hover-text">Toon Fire - Cartoon-style fire effects</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/Bubble.mp4" data-description="Bubble - FX simulation. Complex bubble physics simulation featuring realistic surface tension, refraction, and popping behaviors with detailed material properties and lighting interactions.">
-      <img src="images/Bubble.png" alt="Bubble" width="400" height="300" loading="lazy">
-      <div class="hover-text">Bubble - FX simulation</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/ASCII.mp4" data-description="ASCII - Creative FX project. Experimental visual effects using ASCII art conversion algorithms to transform 3D scenes into text-based animations, exploring the intersection of digital art and coding.">
-      <img src="images/ASCII.png" alt="ASCII" width="400" height="300" loading="lazy">
-      <div class="hover-text">ASCII - Creative FX project</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/Explosion.mp4" data-description="Explosion - Realistic FX explosion. High-detail explosion sequence featuring multi-layered effects including shockwaves, debris, heat distortion, and dynamic lighting for maximum cinematic impact.">
-      <img src="images/Explosion.png" alt="Explosion" width="400" height="300" loading="lazy">
-      <div class="hover-text">Explosion - Realistic FX explosion</div>
-    </article>
-    <article class="project-thumbnail" data-video="videos/SnowTent.mp4" data-description="FX scene composed of Vellum Cloth simulations, Pyro simulation and a custom icicle effect to give the cold vibes I was looking for. I wanted to merge many effects into one singular scene to tel a story within a few seconds only. I just give you the starter, what happened really is up to you.">
-      <img src="images/SnowTent_Thumbnail.png" alt="SnowTent" width="400" height="300" loading="lazy">
-      <div class="hover-text">Explosion - Realistic FX explosion</div>
-    </article>
-  </div>
-</section>
-
-<!-- PROJECT MODAL -->
-<div id="project-modal" class="modal">
-  <div class="modal-content project-modal-content">
-    <span id="close-modal" class="close-button">&times;</span>
-    <div class="project-modal-layout">
-      <div class="video-container">
-        <video id="project-video" controls playsinline style="width: 100%; height: auto; min-height: 400px;">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="description-container">
-        <h3 style="margin-top: 0; color: #ff7800;">Project Description</h3>
-        <div id="project-description" class="modal-description"></div>
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content project-modal-content">
+      <span id="close-modal" class="close-button" role="button" aria-label="Close">&times;</span>
+      <div class="project-modal-layout">
+        <div class="video-container">
+          <video id="project-video" controls playsinline style="width: 100%; height: auto; min-height: 400px;"></video>
+        </div>
+        <div class="description-container"></div>
       </div>
     </div>
   </div>
-</div>
+
   <!-- AWARDS SECTION -->
-<section id="awards" class="awards-section">
-  <h2 class="section-title">Awards & Recognition</h2>
-  <p class="awards-intro">
-    I'm incredibly proud to have received multiple awards for my FX and motion graphics work. Below is a highlight from the piece that earned these recognitions.
-  </p>
+  <section id="awards" class="awards-section">
+    <h2 class="section-title">Awards & Recognition</h2>
+    <p class="awards-intro">
+      I'm incredibly proud to have received multiple awards for my FX and motion graphics work. Below is a highlight from the piece that earned these recognitions.
+    </p>
 
-  <div class="awards-image">
-    <img src="images/Malas_Hierbas.png" alt="Award-winning project still">
-  </div>
+    <div class="awards-image">
+      <img src="images/Malas_Hierbas.png" alt="Award-winning project still">
+    </div>
 
-  <div class="awards-video">
-    <a href="https://www.youtube.com/watch?v=uZWE-R4sVWA" target="_blank" class="video-link">
-      ▶ Watch the Award-Winning Project on YouTube
-    </a>
-  </div>
+    <div class="awards-video">
+      <a href="https://www.youtube.com/watch?v=uZWE-R4sVWA" target="_blank" rel="noopener noreferrer" class="video-link">
+        ▶ Watch the Award-Winning Project on YouTube
+      </a>
+    </div>
 
-<div class="award-details">
-  <h3>Honors Received</h3>
-  <ul>
-    <li>
-      <strong>Nominated to the 2023 Animaizon Film Awards in Zaragoza, Spain.</strong><br />
-      <a href="https://animainzon.blogspot.com/p/jornadas-2021.html" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Winner to the New York International Film Awards on October 2023 to the best short under 5 minutes.</strong><br />
-      <a href="https://www.instagram.com/p/Cz9Ib9cooMS/?img_index=2" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Winner of the Platinum Award for Best Short Film in the Independent Shorts Awards in Los Angeles, November 2023.</strong><br />
-      <a href="https://www.instagram.com/p/C0Rs2Bhoitw/" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Nominated to the Acocollonat Horror Film Festival in Girona, Catalunya.</strong><br />
-      <a href="https://www.instagram.com/p/C0zdqBRIQlm/?img_index=1" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Special mention to the London Worldwide Comedy Short Film Festival in 2024.</strong><br />
-      <a href="https://www.instagram.com/p/C1Z9yuLoHjV/" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Nominated to the Terrifying Thai Film Festival in Tailandia in 2023.</strong><br />
-      <a href="https://www.instagram.com/p/C3Iw2J0Ireu/" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Winner of the Jury Special Award on the Japanese Golden Harvest Film Festival.</strong><br />
-      <a href="https://www.instagram.com/p/C5WgnCftx5f/" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-    <li>
-      <strong>Winner of the “Best Animation Short” awarded by LA Festival of Cinema.</strong><br />
-      <a href="https://www.instagram.com/p/C5oYOditest/" class="award-link" target="_blank">View Festival Website</a>
-    </li>
-  </ul>
-</div>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title">Contact Me</h2>
-      <p>Interested in working together or have questions? Feel free to reach out!</p>
-      <div class="contact-info">
-        <p>Email: <a href="mailto:didacpardomartinez@gmail.com">didacpardomartinez@gmail.com</a></p>
-        <p>Phone: <a href="tel:+34618180800">+34 618 180 800</a></p>
+    <div class="award-details">
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <!-- SVG medal icon -->
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g1)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Nominated — 2023 Animaizon Film Awards</h4>
+          <p>Zaragoza, Spain — Nominated for the festival's selection.</p>
+          <a href="https://animainzon.blogspot.com/p/jornadas-2021.html" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
       </div>
-    </section>
-  </main>
 
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g2" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g2)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Winner — New York International Film Awards (Oct 2023)</h4>
+          <p>Awarded Best Short (under 5 minutes).</p>
+          <a href="https://www.instagram.com/p/Cz9Ib9cooMS/?img_index=2" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-</section>
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g3" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g3)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Winner — Independent Shorts Awards (Platinum)</h4>
+          <p>Platinum Award for Best Short Film — Los Angeles, November 2023.</p>
+          <a href="https://www.instagram.com/p/C0Rs2Bhoitw/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-  <!-- PARTICLE BACKGROUND SCRIPT -->
-  <script>
-    const canvas = document.getElementById('particle-bg');
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let particles = [];
-    const PARTICLE_COUNT = 100;
-    const MAX_DISTANCE = 120;
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g4" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g4)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Nominated — Acocollonat Horror Film Festival</h4>
+          <p>Girona, Catalunya — Official selection.</p>
+          <a href="https://www.instagram.com/p/C0zdqBRIQlm/?img_index=1" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-    function resize() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    }
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g5" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g5)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Special Mention — London Worldwide Comedy Short Film Festival (2024)</h4>
+          <p>Recognized for creativity and audience impact.</p>
+          <a href="https://www.instagram.com/p/C1Z9yuLoHjV/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-    function initParticles() {
-      particles = [];
-      for (let i = 0; i < PARTICLE_COUNT; i++) {
-        particles.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          radius: 2 + Math.random() * 2,
-        });
-      }
-    }
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g6" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g6)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Nominated — Terrifying Thai Film Festival (2023)</h4>
+          <p>Official selection at the festival in Thailand.</p>
+          <a href="https://www.instagram.com/p/C3Iw2J0Ireu/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-    function animateParticles() {
-      ctx.clearRect(0, 0, width, height);
-      for (let p of particles) {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0 || p.x > width) p.vx = -p.vx;
-        if (p.y < 0 || p.y > height) p.vy = -p.vy;
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g7" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g7)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Winner — Jury Special Award, Japanese Golden Harvest Film Festival</h4>
+          <p>Awarded special jury recognition during the festival.</p>
+          <a href="https://www.instagram.com/p/C5WgnCftx5f/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 120, 0, 0.8)';
-        ctx.fill();
-      }
+      <div class="award-item">
+        <div class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g8" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffd1c1" />
+                <stop offset="1" stop-color="#ff6b00" />
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="8" r="4" fill="url(#g8)" />
+            <path d="M8 13v6l4-2 4 2v-6" fill="#ffb07a" />
+          </svg>
+        </div>
+        <div class="award-meta">
+          <h4>Winner — Best Animation Short, LA Festival of Cinema</h4>
+          <p>Awarded Best Animation Short at the LA Festival of Cinema.</p>
+          <a href="https://www.instagram.com/p/C5oYOditest/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
+        </div>
+      </div>
 
-      for (let i = 0; i < PARTICLE_COUNT; i++) {
-        for (let j = i + 1; j < PARTICLE_COUNT; j++) {
-          let dx = particles[i].x - particles[j].x;
-          let dy = particles[i].y - particles[j].y;
-          let dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < MAX_DISTANCE) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(102, 0, 0, ${1 - dist / MAX_DISTANCE})`;
-            ctx.lineWidth = 3;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
+    </div>
+  </section>
 
-      requestAnimationFrame(animateParticles);
-    }
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Interested in working together or have questions? Feel free to reach out!</p>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:didacpardomartinez@gmail.com">didacpardomartinez@gmail.com</a></p>
+      <p>Phone: <a href="tel:+34618180800">+34 618 180 800</a></p>
+    </div>
+  </section>
 
-    window.addEventListener('resize', () => {
-      resize();
-      initParticles();
-    });
+  <script src="scripts/particles.js" defer></script>
+  <script src="scripts/project-modal.js" defer></script>
+  <script src="scripts/polish.js" defer></script>
 
-    resize();
-    initParticles();
-    animateParticles();
-
-    // Ensure background video plays
-    document.addEventListener('DOMContentLoaded', function() {
-      const bgVideo = document.getElementById('bg-video');
-      bgVideo.play().catch(e => {
-        console.log("Autoplay prevented, trying again with user gesture");
-        document.body.addEventListener('click', function() {
-          bgVideo.play();
-        }, { once: true });
-      });
-    });
-  </script>
-
-  <!-- MODAL SCRIPTS (Reel + Projects) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Reel modal
-      const showReelBtn = document.getElementById("show-reel");
-      const reelModal = document.getElementById("reel-modal");
-      const reelCloseBtn = document.getElementById("close-reel");
-      const reelVideo = reelModal.querySelector("video");
-
-      showReelBtn.addEventListener("click", () => {
-        reelModal.style.display = "flex";
-        setTimeout(() => reelModal.classList.add("visible"), 10);
-        reelVideo.currentTime = 0;
-        reelVideo.play();
-      });
-
-      reelCloseBtn.addEventListener("click", () => {
-        reelModal.classList.remove("visible");
-        setTimeout(() => reelModal.style.display = "none", 300);
-        reelVideo.pause();
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === reelModal) {
-          reelCloseBtn.click();
-        }
-      });
-
-      // Project modal
-      const thumbnails = document.querySelectorAll('.project-thumbnail');
-      const projectModal = document.getElementById('project-modal');
-      const projectVideo = document.getElementById('project-video');
-      const projectDesc = document.getElementById('project-description');
-      const projectCloseBtn = document.getElementById('close-modal');
-
-      thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          const videoSrc = thumb.getAttribute('data-video');
-          const descText = thumb.getAttribute('data-description');
-
-          projectVideo.src = videoSrc;
-          projectVideo.volume = 0.33;
-          projectVideo.play();
-
-          projectDesc.textContent = descText;
-
-          projectModal.style.display = 'flex';
-          setTimeout(() => projectModal.classList.add('visible'), 10);
-        });
-      });
-
-      projectCloseBtn.addEventListener('click', () => {
-        projectModal.classList.remove('visible');
-        setTimeout(() => {
-          projectModal.style.display = 'none';
-          projectVideo.pause();
-          projectVideo.src = '';
-          projectDesc.textContent = '';
-        }, 300);
-      });
-
-      window.addEventListener('click', (e) => {
-        if (e.target === projectModal) {
-          projectCloseBtn.click();
-        }
-      });
-    });
-
-    // Project modal functionality
-document.addEventListener("DOMContentLoaded", () => {
-  const thumbnails = document.querySelectorAll('.project-thumbnail');
-  const projectModal = document.getElementById('project-modal');
-  const projectVideo = document.getElementById('project-video');
-  const projectDesc = document.getElementById('project-description');
-  const projectCloseBtn = document.getElementById('close-modal');
-
-  function openProjectModal(videoSrc, descText) {
-    projectVideo.src = videoSrc;
-    projectVideo.volume = 0.33;
-    
-    projectDesc.textContent = descText;
-    projectModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    
-    setTimeout(() => {
-      projectModal.classList.add('visible');
-      projectVideo.play().catch(e => console.log("Autoplay prevented:", e));
-    }, 10);
-  }
-
-  function closeProjectModal() {
-    projectModal.classList.remove('visible');
-    
-    setTimeout(() => {
-      projectModal.style.display = 'none';
-      document.body.style.overflow = '';
-      projectVideo.pause();
-      projectVideo.src = '';
-      projectDesc.textContent = '';
-    }, 300);
-  }
-
-  thumbnails.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const videoSrc = thumb.getAttribute('data-video');
-      const descText = thumb.getAttribute('data-description');
-      openProjectModal(videoSrc, descText);
-    });
-    
-    // Add keyboard support
-    thumb.setAttribute('tabindex', '0');
-    thumb.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const videoSrc = thumb.getAttribute('data-video');
-        const descText = thumb.getAttribute('data-description');
-        openProjectModal(videoSrc, descText);
-      }
-    });
-  });
-
-  projectCloseBtn.addEventListener('click', closeProjectModal);
-
-  window.addEventListener('click', (e) => {
-    if (e.target === projectModal) closeProjectModal();
-  });
-
-  // Close project modal with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal.style.display === 'flex') {
-      closeProjectModal();
-    }
-  });
-});
-  </script>
+</body>
+</html>
 </body>
 </html>
