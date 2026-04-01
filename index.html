@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- Background Elements -->
   <video id="bg-vfx" class="bg-vfx" autoplay muted loop playsinline aria-hidden="true">
     <source src="videos/BG_Video.mp4" type="video/mp4">
     <!-- fallback: just a static background if video unsupported -->
@@ -17,6 +18,10 @@
 
   <canvas id="particle-bg"></canvas>
 
+  <!-- Noise overlay (subtle film grain) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
   <div class="topbar">
     <header id="home" class="hero-header">
       <h1 class="site-title">DÍDAC PARDO MARTÍNEZ - FX Artist</h1>
@@ -33,22 +38,27 @@
     </nav>
   </div>
 
+  <!-- Main Content Sections -->
   <!-- SECTION: INTRO -->
   <section class="intro-section">
     <div class="text-section">
       <h2 class="section-title">HELLO, I'M DÍDAC</h2>
-      <div class="intro-box">
-        <p>Hi! Welcome to my humble web portfolio. My name is Dídac Pardo, a passionate 3D artist who thrives on seeing projects grow and evolve. I work with a diverse set of advanced digital tools and techniques to bring ideas to life. I consider myself a hardworking individual with a lot of energy and dedication for every project I take on.</p>
-      </div>
+      <p>I am an FX Artist with a degree in Animation and Visual Effects, experienced across the full audiovisual production pipeline. My work focuses on procedural FX, simulations, and the integration of visual effects into 3D environments. I have led projects such as the award-recognized short film Malas Hierbas, overseeing both creative direction and technical execution. I also have experience producing scientific outreach videos, translating complex ideas into clear visual narratives. I enjoy collaborating in creative teams and building visually coherent, technically solid work.</p>
 
       <div class="intro-video">
-        <video id="intro-reel" controls playsinline preload="metadata">
-          <!-- Optional webm first, then mp4 -->
-          <source src="videos/DidacPardoMartinez_Reel_v01.mp4" type="video/mp4">
-          <source src="videos/DidacPardoMartinez_Reel_v01.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
+        <div class="intro-video">
+          <article class="project-thumbnail" tabindex="0" role="button" aria-label="Toon Fire - Cartoon-style fire effects" data-video="videos/ToonFire.mp4" data-preview="videos/DidacPardoMartinez_Reel_v01.mp4"></article>
+        </div>
       </div>
+    </div>
+
+    <!-- Compressed Reel Video -->
+    <div class="intro-reel">
+      <video controls playsinline preload="metadata">
+        <source src="videos/DidacPardoMartinez_Reel_v01_Compressed.mp4" type="video/mp4">
+        <source src="videos/DidacPardoMartinez_Reel_v01_Compressed.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
 
@@ -66,10 +76,10 @@
 
       <div class="about-image">
         <img src="images/Foto CV.png" alt="Dídac Pardo working on FX" class="profile-photo">
-        <!-- removed empty experience-box per user request -->
       </div>
     </div>
-    <!-- TECHNICAL SKILLS (added above Education & Training) -->
+
+    <!-- TECHNICAL SKILLS -->
     <div class="skills-section" aria-labelledby="skills-title">
       <h3 id="skills-title">Technical Skills</h3>
       <div class="skills-grid">
@@ -107,6 +117,7 @@
       </div>
     </div>
 
+    <!-- EDUCATION & TRAINING -->
     <div class="education-section">
       <h3>Education & Training</h3>
       <div class="timeline">
@@ -138,37 +149,9 @@
     </div>
   </section>
 
-  <!-- CHIBI CHARACTER -->
-  <div class="chibi-container">
-    <img src="images/Chibi Didac.png" alt="Chibi version of Dídac" class="chibi-img" />
-  </div>
-
-  <!-- Noise overlay (subtle film grain) -->
-  <div class="noise-overlay" aria-hidden="true"></div>
-
-  <!-- SOCIAL LINKS -->
-  <div class="social-buttons">
-    <a href="https://www.linkedin.com/in/didac-pardo/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-    <a href="https://www.instagram.com/didac_pardo/" class="social-btn instagram" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-    <a href="https://www.youtube.com/@D1D4CP4RD0" class="social-btn youtube" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
-    <a href="documents/CV_DidacPardoMartinez.pdf" class="social-btn cv" target="_blank" rel="noopener noreferrer" download>DOWNLOAD CV</a>
-  </div>
-
-  <!-- REEL MODAL -->
-  <div id="reel-modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <span class="close-button" id="close-reel" role="button" aria-label="Close">&times;</span>
-      <!-- Autoplay removed so the reel does not play unexpectedly without JS -- use controls to play manually -->
-      <video controls muted id="reel-video">
-        <source src="videos/DidacPardoMartinez_Reel_v01.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
   <!-- PROJECTS SECTION -->
   <section id="projects" class="projects-grid-section">
-    <h2 class="projects-title">Projects</h2>
+    <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
       <article class="project-thumbnail" tabindex="0" role="button" aria-label="Burning Car - Houdini simulation" data-video="videos/BurningCar.mp4" data-preview="videos/BurningCar.mp4" data-description="Burning Car - Houdini simulation. This project showcases realistic fire and smoke simulations...">
         <img src="images/BurningCar.png" alt="Burning Car" width="400" height="300" loading="lazy">
@@ -198,21 +181,12 @@
         <img src="images/SnowTent_Thumbnail.png" alt="SnowTent" width="400" height="300" loading="lazy">
         <div class="hover-text">Snow Tent</div>
       </article>
+      <article class="project-thumbnail" tabindex="0" role="button" aria-label="Carbon Sequestration - Science Dissemination" data-video="videos/Maite_c02_07.mp4" data-description="FX scene depicting the absorption process happening in ricce fields across the world. carbon dioxide molecules get ripped by the soil, witch absorbs the carbon atoms in the air, leaving only the oxygen in the atmosphere. This carbon molecules get stuck in the soil.">
+        <img src="images/Carbon sequestration.png" alt="CarbonSequestration" width="400" height="300" loading="lazy">
+        <div class="hover-text">Carbon Sequestration</div>
+      </article>
     </div>
   </section>
-
-  <!-- PROJECT MODAL -->
-  <div id="project-modal" class="modal" aria-hidden="true">
-    <div class="modal-content project-modal-content">
-      <span id="close-modal" class="close-button" role="button" aria-label="Close">&times;</span>
-      <div class="project-modal-layout">
-        <div class="video-container">
-          <video id="project-video" controls playsinline style="width: 100%; height: auto; min-height: 400px;"></video>
-        </div>
-        <div class="description-container"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- AWARDS SECTION -->
   <section id="awards" class="awards-section">
@@ -392,7 +366,6 @@
           <a href="https://www.instagram.com/p/C5oYOditest/" target="_blank" rel="noopener noreferrer">View Festival Website</a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -406,11 +379,45 @@
     </div>
   </section>
 
+  <!-- Interactive Elements -->
+  <!-- SOCIAL LINKS -->
+  <div class="social-buttons">
+    <a href="https://www.linkedin.com/in/didac-pardo/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://www.instagram.com/didac_pardo/" class="social-btn instagram" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+    <a href="https://www.youtube.com/@D1D4CP4RD0" class="social-btn youtube" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+    <a href="documents/CV_DidacPardoMartinez.pdf" class="social-btn cv" target="_blank" rel="noopener noreferrer" download>DOWNLOAD CV</a>
+  </div>
+
+  <!-- Modals -->
+  <!-- REEL MODAL -->
+  <div id="reel-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close-button" id="close-reel" role="button" aria-label="Close">&times;</span>
+      <!-- Autoplay removed so the reel does not play unexpectedly without JS -- use controls to play manually -->
+      <video controls muted id="reel-video">
+        <source src="videos/DidacPardoMartinez_Reel_v01.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content project-modal-content">
+      <span id="close-modal" class="close-button" role="button" aria-label="Close">&times;</span>
+      <div class="project-modal-layout">
+        <div class="video-container">
+          <video id="project-video" controls playsinline style="width: 100%; height: auto; min-height: 400px;"></video>
+        </div>
+        <div class="description-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="scripts/particles.js" defer></script>
   <script src="scripts/project-modal.js" defer></script>
   <script src="scripts/polish.js" defer></script>
 
-</body>
-</html>
 </body>
 </html>
