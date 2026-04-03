@@ -1287,10 +1287,7 @@ body {
   background: linear-gradient(135deg, rgba(0, 119, 181, 0.9), rgba(102, 166, 217, 0.9));
   border-color: rgba(0, 119, 181, 0.5);
 }
-.instagram { 
-  background: linear-gradient(135deg, rgba(240, 148, 51, 0.9), rgba(188, 24, 136, 0.9));
-  border-color: rgba(188, 24, 136, 0.5);
-}
+
 .youtube { 
   background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(255, 101, 101, 0.9));
   border-color: rgba(255, 0, 0, 0.5);
